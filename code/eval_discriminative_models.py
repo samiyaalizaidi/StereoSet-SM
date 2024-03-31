@@ -219,7 +219,7 @@ class BiasEvaluator():
                 outputs = model(input_ids, token_type_ids=token_type_ids)
                 if type(outputs) == tuple:
                     outputs = outputs[0]
-                outputs = torch.softmax(outputs, dim=1)
+                outputs = torch.softmax(outputs.logits, dim=1)
 
                 for idx in range(input_ids.shape[0]):
                     probabilities = {}
