@@ -5,7 +5,7 @@ INPUT_FILE = ../data/dev.json
 endif
 
 ifndef OUTPUT_DIR
-OUTPUT_DIR = predictions/
+OUTPUT_DIR = my_predictions/
 endif
 
 all: bert roberta gpt2 xlnet sentiment
